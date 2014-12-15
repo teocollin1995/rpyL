@@ -74,7 +74,6 @@ r.X11()
 r.layout(r.matrix(robjects.IntVector([1,2,3,2]), nrow=2, ncol=2))
 filevab = "/home/teo/the.png"
 from rpy2.robjects.packages import importr
-grdevices = importr('grDevices')
 grdevices.png(file=filevab,width=512,height=512)
 r.plot(r.runif(10), y, xlab="runif", ylab="foo/bar", col="red")
 grdevices.dev_off()
