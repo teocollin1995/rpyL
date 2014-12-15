@@ -45,7 +45,7 @@ def Bar_Graph_Gen(dataSetName,groupName):
         y = 'Percentage of Students'
         plot = robjects.r('ggplot(data, aes(factor(' + validNames[x1] + '))) +  geom_bar(aes(y = 100 *(..count..)/sum(..count..))) + labs(title="' + title + '",x = "' + x + '" ,y = "' + y + '")')
         fileName = cwd + '/barPlot' + groupName + x
-        grdevices.png(file=fileName,width=512,height=512)
+        grdevices.png(file=fileName,width=800,height=800) #You change file size here
         plot.plot()
         grdevices.dev_off
     return ()
