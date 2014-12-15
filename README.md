@@ -11,7 +11,7 @@ or
 ```
 python main2.pyc
 ```
-You will be prompted for the list of csv files. They should be named by their grade. 11th grade's cs file is 11, for example. Support for total,ms,hs has not been added yet.
+You will be prompted for the list of csv files. They should be named by their grade. 11th grade's csv file is 11, for example. Support for total, ms, hs has not been added yet.
 ### Future Plans
 1. Box Plot support
 2. Attempting all correlation
