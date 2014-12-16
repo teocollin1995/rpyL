@@ -15,7 +15,9 @@ You will be prompted for the list of csv files. They should be named by their gr
 ###Current Problems:
 1. The ticks.
 2. Data Sanitization  
-### Future Plans
+
+### Future Plans:
+
 0. Fix the ticks
 1. Box Plot support
 2. Attempting all correlation
