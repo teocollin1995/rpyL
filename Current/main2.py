@@ -95,7 +95,7 @@ def User_bar ():
 
 
 def mass_r_binary_op(op,verb,dataSetName,cutoff):
-    robjects.r('data <- read.csv(\'' + dataSetName + '.csv' + '\')')
+    robjects.r('data <- read.csv(\'' + dataSetName + '.csv' + '\',na.strings = "N/A")')
     data = r['read.csv'](dataSetName + '.csv')
     names = r['names'](data)
     validNames = validNumber(names)
@@ -103,10 +103,12 @@ def mass_r_binary_op(op,verb,dataSetName,cutoff):
     results = []
     for x in range(0,l):
         xname = validNames[x]
+        print(xname)
         #print(xname)
         robjects.r(xname + ' <- data$' + xname)
         for y in range((x+1),l):
             yname = validNames[y]
+            print(yname)
             robjects.r(yname+ ' <- data$' + yname)
             #print(yname)
             result = robjects.r(op+'(' + validNames[x] + ',' + validNames[y] + ')')
@@ -121,7 +123,7 @@ def mass_r_binary_op(op,verb,dataSetName,cutoff):
     f.close()
 
 
-mass_r_binary_op('cor',' correlates with ','6',.5)
+mass_r_binary_op('cor',' correlates with ','11',.5)
 #runs User_bar()
 #User_bar()
 
