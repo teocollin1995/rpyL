@@ -1,0 +1,1 @@
+Note: The reason only one boxplot was generated is because total.csv is so messed up that only the serial number section is a numerical vector.
